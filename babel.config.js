@@ -14,6 +14,7 @@ const presets = [
       corejs: "3.36.0",
     },
   ],
+  "@babel/preset-typescript",
 ];
 
 const plugins = [

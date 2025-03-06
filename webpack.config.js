@@ -8,15 +8,21 @@ const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: {
-    main: "./src/index.js",
-    about: "./src/about/index.js",
-    analytics: "./src/analytics/index.js",
+    main: "./src/index.ts",
+    about: "./src/about/index.ts",
+    analytics: "./src/analytics/index.ts",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "scripts/[name].[contenthash].js",
     clean: true,
     publicPath: "/",
+  },
+  resolve: {
+    extensions: [".ts", ".js", ".json"],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
   devServer: {
     static: {
@@ -45,7 +51,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|js)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -54,7 +60,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -88,7 +94,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
+      filename: isDev ? "styles/[name].css" : "styles/[name].[contenthash].css",
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
