@@ -7,38 +7,35 @@
     <meta name="description" content="News Analyzer dynamic web-site" />
     <meta name="author" content="Fedor Lukhmanov" />
     <title>News Analyzer - Аналитика</title>
-    <link
-      rel="stylesheet"
-      href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>"
-    />
     <link rel="shortcut icon" href="<%=require('../images/favicon.ico' )%>" />
   </head>
   <body>
-    <div class="page"
-      ><header class="header header_black-content"
-        ><a class="header__logo header__logo_black" href="../">NewsAnalyzer</a>
-        <nav class="header__links-container"
-          ><a class="link header__link" href="../">Главная</a>
+    <div class="page">
+      <header class="header header_black-content">
+        <a class="header__logo header__logo_black" href="../">NewsAnalyzer</a>
+        <nav class="header__links-container">
+          <a class="link header__link" href="../">Главная</a>
           <a class="link header__link" href="../about">О проекте</a>
         </nav>
       </header>
-      <nav class="path"
-        ><a href="../" class="path__main link">Главная</a
-        ><span class="path__location">/ Аналитика</span></nav
-      >
+      <nav class="path">
+        <a href="../" class="path__main link">Главная</a
+        ><span class="path__location">/ Аналитика</span>
+      </nav>
       <main class="main">
-        <section class="request-data"
-          ><h2 class="request-data__title"></h2>
-          <p class="request-data__paragraph"
-            >Новостей за неделю:
-            <span class="request-data__paragraph_bold"></span
-          ></p>
+        <section class="request-data">
+          <h2 class="request-data__title"></h2>
+          <p class="request-data__paragraph">
+            Новостей за неделю:
+            <span class="request-data__paragraph_bold"></span>
+          </p>
           <!-- <p class="request-data__paragraph"
             >Упоминаний в заголовках:
             <span class="request-data__paragraph_bold">235</span></
-          > --> </section
-        ><section class="analytics"
-          ><h2 class="analytics__title">Аналитика по дням</h2>
+          > -->
+        </section>
+        <section class="analytics">
+          <h2 class="analytics__title">Аналитика по дням</h2>
 
           <span class="analytics__axis-label analytics__axis-label_name"
             >Дата</span
@@ -48,13 +45,13 @@
           >
           <div class="analytics__date-axis"></div>
 
-          <div class="analytics__news-axis analytics__news-axis_with-line"
-            ><span class="analytics__news-axis-mark">0</span
+          <div class="analytics__news-axis analytics__news-axis_with-line">
+            <span class="analytics__news-axis-mark">0</span
             ><span class="analytics__news-axis-mark">25</span
             ><span class="analytics__news-axis-mark">50</span
             ><span class="analytics__news-axis-mark">75</span
-            ><span class="analytics__news-axis-mark">100</span></div
-          >
+            ><span class="analytics__news-axis-mark">100</span>
+          </div>
 
           <!-- <div class="analytics__plot">
             <span class="analytics__date">19, пн</span
@@ -73,23 +70,24 @@
             <div class="analytics__value">34</div>
           </div> -->
 
-          <div class="analytics__news-axis"
-            ><span class="analytics__news-axis-mark">0</span
+          <div class="analytics__news-axis">
+            <span class="analytics__news-axis-mark">0</span
             ><span class="analytics__news-axis-mark">25</span
             ><span class="analytics__news-axis-mark">50</span
             ><span class="analytics__news-axis-mark">75</span
-            ><span class="analytics__news-axis-mark">100</span></div
-          >
-        </section></main
-      ><footer class="footer"
-        ><p class="footer__copyright">&copy; 2020 Supersite</p>
-        <nav class="footer__link-list"
-          ><a class="footer__link link" href="../">Главная</a
+            ><span class="analytics__news-axis-mark">100</span>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Supersite</p>
+        <nav class="footer__link-list">
+          <a class="footer__link link" href="../">Главная</a
           ><a class="footer__link link" href="../about/">О проекте</a
           ><a class="footer__link link" href="https://praktikum.yandex.ru/"
             >Яндекс.Практикум</a
-          ></nav
-        >
+          >
+        </nav>
         <div class="footer__icons-container">
           <a
             class="footer__social-icon footer__social-icon_github"
@@ -98,8 +96,9 @@
           <a
             class="footer__social-icon footer__social-icon_facebook"
             href="https://www.facebook.com/yandex.praktikum/"
-          ></a> </div></footer
-    ></div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+          ></a>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
