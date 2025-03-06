@@ -1,6 +1,6 @@
 const presets = [
   [
-    "@babel/env",
+    "@babel/preset-env",
     {
       targets: {
         edge: "17",
@@ -8,21 +8,18 @@ const presets = [
         chrome: "64",
         safari: "11.1",
         esmodules: true,
-        ie: "11"
+        ie: "11",
       },
       useBuiltIns: "usage",
-      corejs: "3.0.0"
-    }
-  ]
+      corejs: "3.36.0",
+    },
+  ],
 ];
 
 const plugins = [
-  [
-    "@babel/plugin-proposal-class-properties",
-    {
-      loose: true
-    }
-  ]
+  ["@babel/plugin-transform-class-properties", { loose: true }],
+  ["@babel/plugin-transform-private-methods", { loose: true }],
+  ["@babel/plugin-transform-private-property-in-object", { loose: true }],
 ];
 
 module.exports = { presets, plugins };
