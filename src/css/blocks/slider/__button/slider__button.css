@@ -25,7 +25,7 @@
 } */
 
 .slider__button::after {
-  content: url("../../../images/arrow-icon-white.svg");
+  content: url("../../../../images/arrow-icon-white.svg");
   display: inline-block;
   top: 2px;
 }
