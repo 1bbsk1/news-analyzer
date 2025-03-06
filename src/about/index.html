@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -8,56 +8,57 @@
     <meta name="author" content="Fedor Lukhmanov" />
 
     <title>News Analyzer - О себе</title>
-    <link
-      rel="stylesheet"
-      href="<%=htmlWebpackPlugin.files.chunks.about.css %>"
-    />
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css[0] %>" />
 
     <link rel="shortcut icon" href="<%=require('../images/favicon.ico' )%>" />
   </head>
   <body>
     <div class="page">
-      <header class="header header_black-content"
-        ><a class="header__logo header__logo_black" href="../">NewsAnalyzer</a>
-        <nav class="header__links-container"
-          ><a class="link header__link" href="../">Главная</a>
+      <header class="header header_black-content">
+        <a class="header__logo header__logo_black" href="../">NewsAnalyzer</a>
+        <nav class="header__links-container">
+          <a class="link header__link" href="../">Главная</a>
           <a class="link header__link header__link_selected" href="../about/"
             >О проекте</a
           >
         </nav>
       </header>
       <main class="main">
-        <section class="clients"
-          ><h2 class="clients__title">Клиентам</h2
-          ><p class="clients__paragraph"
-            >Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель —
-            показать, чему научился студент, какими технологиями владеет.</p
-          ><p class="clients__paragraph"
-            >Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким
-            и масштабируемым. Кроме того, добавлять новые страницы и
+        <section class="clients">
+          <h2 class="clients__title">Клиентам</h2>
+          <p class="clients__paragraph">
+            Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель —
+            показать, чему научился студент, какими технологиями владеет.
+          </p>
+          <p class="clients__paragraph">
+            Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и
+            масштабируемым. Кроме того, добавлять новые страницы и
             функциональность проще и быстрее, чем в проектах, выполненных по
-            другим методологиям. Также сайт проще и дешевле поддерживать. </p
-          ><p class="clients__paragraph"
-            >Карточки с новостями приходят с сервера и обрабатываются
-            асинхронно. То есть сайт продолжает работать, пока от сервера
-            приходит ответ. Это повышает удобство использования сервиса.</p
-          ><p class="clients__paragraph"
-            >При создании проекта была использована сборка технологией Webpack.
+            другим методологиям. Также сайт проще и дешевле поддерживать.
+          </p>
+          <p class="clients__paragraph">
+            Карточки с новостями приходят с сервера и обрабатываются асинхронно.
+            То есть сайт продолжает работать, пока от сервера приходит ответ.
+            Это повышает удобство использования сервиса.
+          </p>
+          <p class="clients__paragraph">
+            При создании проекта была использована сборка технологией Webpack.
             Это современный подход к разработке сайтов. Код оптимизируется, а
             значит, сайт работает быстрее. Также сайт работает в старых
             браузерах. Даже если посетители — пользователи старых операционных
             систем, у них не будет проблем с отображением. А значит,
-            потенциальная аудитория возрастает.</p
-          ><p class="clients__paragraph"
-            >Проект был проверен экспертами Яндекс.Практикума. Если вашему
-            бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p
-          ></section
-        >
-        <section class="technology"
-          ><h2 class="technology__title">Используемые технологии</h2>
+            потенциальная аудитория возрастает.
+          </p>
+          <p class="clients__paragraph">
+            Проект был проверен экспертами Яндекс.Практикума. Если вашему
+            бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.
+          </p>
+        </section>
+        <section class="technology">
+          <h2 class="technology__title">Используемые технологии</h2>
 
-          <h3 class="technology__tech-name"
-            >HTML<svg
+          <h3 class="technology__tech-name">
+            HTML<svg
               class="technology__tech-icon"
               width="120"
               height="120"
@@ -76,9 +77,11 @@
                 clip-rule="evenodd"
                 d="M34.4834 32.1582H85.6064V41.8582H45.0714L46.0403 53.9191H84.7707L82.6975 86.5043L60.0592 92.4055L39.0776 86.4689L37.572 72.2489L47.2963 71.2356L48.1118 78.9383L60.1651 82.3487L73.3839 78.9029L74.3563 63.6191H37.0107L34.4834 32.1582Z"
                 fill="#F5F6F7"
-              /></svg></h3
-          ><h3 class="technology__tech-name"
-            >CSS<svg
+              />
+            </svg>
+          </h3>
+          <h3 class="technology__tech-name">
+            CSS<svg
               class="technology__tech-icon"
               width="120"
               height="120"
@@ -97,9 +100,11 @@
                 clip-rule="evenodd"
                 d="M38.5533 32.145H86.7026L84.4377 59.1264L82.6949 86.5197L60.0575 92.4206L39.0771 86.4843L37.5703 72.2531L47.2943 71.2338L48.1086 78.9253L60.1631 82.336L73.3829 78.8899L74.3535 63.6347H53.2773V53.9059H75.0641L76.0741 41.8738H38.5533V32.145Z"
                 fill="#F5F6F7"
-              /></svg></h3
-          ><h3 class="technology__tech-name"
-            >Java Script<svg
+              />
+            </svg>
+          </h3>
+          <h3 class="technology__tech-name">
+            Java Script<svg
               class="technology__tech-icon"
               width="120"
               height="120"
@@ -115,9 +120,11 @@
               <path
                 d="M68.7603 89.9546L75.7999 85.8787C77.653 88.9051 80.0615 91.1281 84.3224 91.1281C87.9047 91.1281 90.1891 89.337 90.1891 86.8668C90.1891 83.9025 87.8425 82.8525 83.89 81.1239L81.7292 80.1969C75.4914 77.5419 71.3536 74.2071 71.3536 67.1668C71.3536 60.6824 76.294 55.7417 84.0139 55.7417C89.5102 55.7417 93.4625 57.6563 96.303 62.6586L89.5715 66.9813C88.0893 64.326 86.4841 63.2764 84.014 63.2764C81.482 63.2764 79.8762 64.882 79.8762 66.9813C79.8762 69.5751 81.482 70.6253 85.1869 72.231L87.3482 73.1573C94.6972 76.3071 98.8351 79.518 98.8351 86.7432C98.8351 94.525 92.7213 98.7857 84.5079 98.7857C76.4796 98.7857 71.292 94.9571 68.7604 89.9546"
                 fill="#F5F6F7"
-              /></svg></h3
-          ><h3 class="technology__tech-name"
-            >Webpack<svg
+              />
+            </svg>
+          </h3>
+          <h3 class="technology__tech-name">
+            Webpack<svg
               class="technology__tech-icon"
               width="120"
               height="120"
@@ -133,8 +140,10 @@
                 d="M58.1574 87.8019L33.4731 74.2229V47.3414L58.1574 61.5914V87.8019ZM61.6837 87.8019L86.3679 74.2361V47.3414L61.6837 61.5914V87.8019ZM35.1442 44.2361L59.9205 30.6177L84.6968 44.2361L59.9205 58.5387L35.1442 44.2361Z"
                 fill="#D1D2D6"
               />
-            </svg> </h3></section
-        ><section class="author">
+            </svg>
+          </h3>
+        </section>
+        <section class="author">
           <img
             class="author__photo"
             src="<%=require('../images/author-photo.jpg')%>"
@@ -143,16 +152,16 @@
           />
           <div class="author__container">
             <h2 class="author__title">Об авторе</h2>
-            <p class="author__paragraph"
-              >Это блок с описанием автора проекта. Здесь следует указать, как
+            <p class="author__paragraph">
+              Это блок с описанием автора проекта. Здесь следует указать, как
               вас зовут, чем вы занимаетесь, какими технологиями разработки
-              владеете.</p
-            >
-            <p class="author__paragraph"
-              >Также можно рассказать о процессе обучения в Практикуме, чему вы
-              тут научились, и чем можете помочь потенциальным заказчикам.</p
-            ></div
-          >
+              владеете.
+            </p>
+            <p class="author__paragraph">
+              Также можно рассказать о процессе обучения в Практикуме, чему вы
+              тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+          </div>
         </section>
 
         <section class="github">
@@ -168,15 +177,15 @@
         </section>
       </main>
 
-      <footer class="footer"
-        ><p class="footer__copyright">&copy; 2020 Supersite</p>
-        <nav class="footer__link-list"
-          ><a class="link footer__link" href="../">Главная</a
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Supersite</p>
+        <nav class="footer__link-list">
+          <a class="link footer__link" href="../">Главная</a
           ><a class="link footer__link" href="../about/">О проекте</a
           ><a class="link footer__link" href="https://praktikum.yandex.ru/"
             >Яндекс.Практикум</a
-          ></nav
-        >
+          >
+        </nav>
         <div class="footer__icons-container">
           <a
             class="footer__social-icon footer__social-icon_github"
@@ -189,6 +198,6 @@
         </div>
       </footer>
     </div>
-    <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+    <script src="<%= htmlWebpackPlugin.files.js[0] %>"></script>
   </body>
 </html>
