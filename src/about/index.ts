@@ -1,5 +1,5 @@
 import "./index.css";
-import Flickity from "flickity";
+// import Flickity from "flickity";
 import GithubApi from "../js/modules/GithubApi";
 import CommitCard from "../js/components/CommitCard";
 import CommitCardList from "../js/components/CommitCardList";
@@ -32,10 +32,10 @@ const githubApi = new GithubApi({
   oAuthToken: GITHUB_OAUTH_TOKEN,
 });
 
-const flkty = new Flickity(sliderContainer, {
-  groupCells: true,
-  initialIndex: 3,
-});
+// const flkty = new Flickity(sliderContainer, {
+//   groupCells: true,
+//   initialIndex: 3,
+// });
 
 githubApi.getCommits().then((response: CommitData[]) => {
   const commitCardList = new CommitCardList(
@@ -54,5 +54,5 @@ githubApi.getCommits().then((response: CommitData[]) => {
       });
     }),
   );
-  flkty.append(commitCardList.fetchCommits());
+  // flkty.append(commitCardList.fetchCommits());
 });
