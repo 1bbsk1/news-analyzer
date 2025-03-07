@@ -3,8 +3,24 @@ import NewsApi from "./js/modules/NewsApi";
 import NewsCard from "./js/components/NewsCard";
 import NewsCardList from "./js/components/NewsCardList";
 import SearchInput from "./js/components/SearchInput";
+
 import { API_KEY, ENDPOINT } from "./js/constants/news-api-variables";
-import { NewsArticle, NewsApiResponse, NewsCardConfig } from "./js/types";
+
+interface NewsArticle {
+  title: string;
+  description: string;
+  urlToImage: string;
+  publishedAt: string;
+  source: {
+    name: string;
+  };
+  url: string;
+}
+
+interface NewsApiResponse {
+  articles: NewsArticle[];
+  query?: string;
+}
 
 const mainElement = document.querySelector(".main") as HTMLElement;
 const searchInputElement = document.querySelector(
@@ -30,11 +46,10 @@ const cardList = new NewsCardList({
 
 searchButtonElement.addEventListener("click", searchButtonClickHandler);
 
-function searchButtonClickHandler(event: MouseEvent): void {
+function searchButtonClickHandler(event: MouseEvent) {
   event.preventDefault();
   searchButtonElement.disabled = true;
   searchInputElement.disabled = true;
-
   const queryString = searchInput.fetchQuery();
   cardList.renderLoading();
 
@@ -42,6 +57,7 @@ function searchButtonClickHandler(event: MouseEvent): void {
     .getNews(queryString)
     .then((response: NewsApiResponse) => {
       response.query = queryString;
+
       localStorage.setItem("newsData", JSON.stringify(response));
 
       const cardsArray = JSON.parse(
@@ -54,7 +70,7 @@ function searchButtonClickHandler(event: MouseEvent): void {
           date: article.publishedAt,
           source: article.source.name,
           url: article.url,
-        } as NewsCardConfig);
+        });
       });
 
       cardList.addCards(cardsArray);
@@ -64,14 +80,13 @@ function searchButtonClickHandler(event: MouseEvent): void {
       searchInputElement.disabled = false;
     })
     .catch((error: Error) => {
-      console.error("Search failed:", error);
       cardList.renderNoResults();
       searchButtonElement.disabled = false;
       searchInputElement.disabled = false;
     });
 }
 
-function showMoreHandler(event: MouseEvent): void {
+function showMoreHandler(event: MouseEvent) {
   event.preventDefault();
   cardList.loadBunch();
   if (cardList.isFinished()) {
